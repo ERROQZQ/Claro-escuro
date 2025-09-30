@@ -1,0 +1,58 @@
+body{
+
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    line-height: none;
+    margin: 0;
+    padding: 0;
+    overflow: 0;
+    background-color: black;
+
+}
+
+
+
+.forma{
+
+    width: 150vh;
+    height: 55vh;
+    background-color: rgb(135, 111, 240);
+    box-shadow: -20px 31px 00px 0px rgb(0, 28, 67);
+    border-radius: 15rem;    
+
+}
+
+.circulo{
+    position: absolute;
+    top: 25vh;
+    left: 31vh;
+    width: 50vh;
+    height: 50vh;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20rem;  
+    transition: ease 1s;   
+
+}
+
+
+/* hover normal (quando não está ativo) */
+.btn:hover:not(.active) .circulo {
+  left: 80vh; /* vai pra frente */
+  background-color: orange;
+}
+
+/* quando ativo (clicado) */
+.btn.active .circulo {
+  transform: translateX(90vh);
+  background-color: blue;
+}
+
+/* hover inverso (quando já está ativo) */
+.btn.active:hover .circulo {
+  transform: translateX(50vh); /* volta pro início */
+  background-color: orange;
+}
+
